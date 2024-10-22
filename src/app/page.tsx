@@ -1,11 +1,12 @@
 "use client"
 
+import InProgress from "@/components/custom/InProgress";
 import ClientLayout from "./clientLayout";
 
-export default function Home() {
+export default function About() {
   return (
     <ClientLayout>
-      Home Page
+      <InProgress />
     </ClientLayout>
   );
 }

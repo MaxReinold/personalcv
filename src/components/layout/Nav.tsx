@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+type NavItems = {
+    [key: string]: string;
+};
+
+
 export default function Nav() {
-    const items:any = {
+    const items:NavItems = {
         about: "/",
         contact: "/contact",
         projects: "/projects"

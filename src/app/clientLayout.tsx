@@ -7,14 +7,24 @@ import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-    const localTheme = localStorage.getItem('darkmode');
-    let parsedTheme = localTheme ? JSON.parse(localTheme): false;
+    const [isDarkMode, setDarkMode] = useState<boolean | null>(null); 
 
-    const [isDarkMode, setDarkMode] = useState(parsedTheme);
+    useEffect(() => {
+        const savedMode = localStorage.getItem('darkmode');
+        if (savedMode) {
+            setDarkMode(JSON.parse(savedMode));
+        } else {
+            setDarkMode(true); 
+        }
+    }, []);
 
-    const updateDarkMode = (newVal:boolean) => {
-        localStorage.setItem('darkmode', JSON.stringify(newVal))
+    const updateDarkMode = (newVal: boolean) => {
+        localStorage.setItem('darkmode', JSON.stringify(newVal));
         setDarkMode(newVal);
+    };
+
+    if (isDarkMode === null) {
+        return null; 
     }
 
     return (
