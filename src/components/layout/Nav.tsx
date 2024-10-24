@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import './Nav.css'
 
 type NavItems = {
     [key: string]: string;
@@ -32,8 +33,8 @@ interface NavItemProps{
 function NavItem({label, href}:NavItemProps) {
     const pathname = usePathname();
     return (
-        <li>
-            {pathname === href?<span className="text-muted-foreground">{label}</span>:<Link href={href}>{label}</Link>}
+        <li className="nav-item">
+            {pathname === href?<span className="text-muted-foreground current">{label}</span>:<Link href={href}>{label}</Link>}
         </li>
     )
 }

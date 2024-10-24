@@ -11,7 +11,7 @@ return (
     className={'text-muted-foreground no-underline absolute bottom-1 left-1/2 -translate-x-1/2'} 
     variant={'link'} 
     onClick={() => setValue(!value)}>
-    {value?"Dark Mode" : "Light Mode"}
+    {value?"dark mode" : "light mode"}
     </Button>
 )
 }
