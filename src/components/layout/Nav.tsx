@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import './Nav.css'
 
 type NavItems = {
     [key: string]: string;
@@ -9,7 +8,7 @@ type NavItems = {
 
 export default function Nav() {
     const items:NavItems = {
-        about: "/",
+        home: "/",
         contact: "/contact",
         projects: "/projects"
     }
@@ -33,8 +32,10 @@ interface NavItemProps{
 function NavItem({label, href}:NavItemProps) {
     const pathname = usePathname();
     return (
-        <li className="nav-item">
-            {pathname === href?<span className="text-muted-foreground current">{label}</span>:<Link href={href}>{label}</Link>}
+        <li className="nav-item text-sm">
+            {pathname === href?
+            <span className="text-foreground current">●</span>:
+            <Link className="text-muted-foreground hover:text-foreground" href={href}>{label}</Link>}
         </li>
     )
 }
