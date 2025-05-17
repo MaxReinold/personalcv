@@ -7,6 +7,10 @@ import { faGithub, } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
 
 export default function Main() {
+    const openInNewTab = (url: string) => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+    
     return (
         <div className="flex flex-col gap-2">
             <CircleUser size={128}/>
@@ -19,14 +23,20 @@ export default function Main() {
             </div>
             <hr className="my-2"/>
             <div className="flex gap-4 items-center justify-between">
-                <Button variant="outline" onClick={() => {}} className="transition-background hover:cursor-pointer hover:bg-gray-800 hover:scale-110">
+                <Button variant="outline" className="transition-background hover:cursor-pointer hover:bg-gray-800 hover:scale-110" onClick={() => {
+                    openInNewTab("/Resume.pdf");
+                }}>
                     <FileText />Resume
                 </Button>
                 <div className="flex items-center gap-2">
-                    <Button variant="ghost" className="h-8 w-8 transition-background hover:bg-gray-800 rounded-full hover:cursor-pointer hover:scale-125">
+                    <Button variant="ghost" className="h-8 w-8 transition-background hover:bg-gray-800 rounded-full hover:cursor-pointer hover:scale-125" onClick={() => {
+                        openInNewTab("https://github.com/MaxReinold/");
+                    }}>
                         <FontAwesomeIcon icon={faGithub} className="text-xl"/>
                     </Button>
-                    <Button variant="ghost" className="h-8 w-8 transition-background hover:bg-gray-800 rounded-full hover:cursor-pointer hover:scale-125">
+                    <Button variant="ghost" className="h-8 w-8 transition-background hover:bg-gray-800 rounded-full hover:cursor-pointer hover:scale-125" onClick={() => {
+                        openInNewTab("https://www.linkedin.com/in/charlesreinold/");
+                    }}>
                         <FontAwesomeIcon icon={faLinkedinIn} className="text-xl"/>
                     </Button>
                 </div>
