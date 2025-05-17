@@ -5,6 +5,7 @@ export type SkillType = {
     icon: JSX.Element;
     description: string;
     color: string;
+    stack?: boolean;
 };
 
 export type SkillsByCategory = {

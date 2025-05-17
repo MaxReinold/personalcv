@@ -16,12 +16,11 @@ export default function Main() {
             <CircleUser size={128}/>
             <div className="text-3xl name">Maxwell Reinold</div>
             <div>
-                <div className="text-gray-400 text-md font-semibold">Software Engineer</div>
+                <div className="text-gray-400 text-md font-semibold">Fullstack Developer</div>
                 <div className="text-gray-400 text-sm"><span className="mx-1">📍</span>Atlanta, Georgia</div>
                 <div className="text-gray-400">Bachelor of Computer Science</div>
                 <div className="text-gray-400 text-sm ml-4 pl-1">University of Georgia</div>
             </div>
-            <hr className="my-2"/>
             <div className="flex gap-4 items-center justify-between">
                 <Button variant="outline" className="transition-background hover:cursor-pointer hover:bg-gray-800 hover:scale-110" onClick={() => {
                     openInNewTab("/Resume.pdf");
