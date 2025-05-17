@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Skill from "./skill";
 import { skills } from '@/app/data';
 import { cn } from "@/lib/utils";
@@ -9,13 +9,17 @@ import SectionHeading from "./sectionHeading";
 export default function Skills() {
     const skillTitles = Object.keys(skills);
     
-    const [allSkills, setAllSkills] = useState(() => {
+    const [allSkills] = useState(() => {
         const modifiedSkills = { ...skills };
         
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         if (skillTitles.includes("All Skills") && Array.isArray(skills["All Skills"]) && skills["All Skills"].length === 0) {
             modifiedSkills["All Skills"] = Object.entries(skills)
-                .filter(([key]) => key !== "All Skills")
-                .flatMap(([_, skillArray]) => skillArray);
+            .filter(([key]) => key !== "All Skills")
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+            .flatMap(([_, skillArray]) => {
+                return skillArray
+            });
         }
         
         return modifiedSkills;
