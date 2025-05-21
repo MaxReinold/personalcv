@@ -32,7 +32,7 @@ export default function Skills() {
     }
     
     return (
-        <div className={cn("flex flex-col gap-4 w-full items-center relative transition-all pb-8")}>
+        <div className={cn("flex flex-col gap-4 w-full items-center relative transition-all pb-8 max-w-4xl")}>
             <SectionHeading>Skills</SectionHeading>
             <div className="flex flex-row gap-10">
                 {skillTitles.map((key, index) => {

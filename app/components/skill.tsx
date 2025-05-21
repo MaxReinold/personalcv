@@ -5,7 +5,7 @@ type SkillProps = {
 };
 
 export default function Skill({ skill }: SkillProps) {return (
-        <div className="flex flex-row items-center gap-2 p-1 font-sans rounded-lg border border-transparent w-48 transition-all bg-neutral-800 skill-card">
+        <div className="flex flex-row items-center gap-2 p-1 font-sans w-48 rounded-lg transition-all bg-black skill-card">
             <div className="w-10 h-10 flex justify-center items-center rounded-lg p-2 icon transition-all">
                 {skill.icon}
             </div>

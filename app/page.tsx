@@ -1,3 +1,4 @@
+"use client"
 import Main from "./components/main";
 import Information from './components/information'
 
