@@ -4,10 +4,14 @@ import ProjectCard from "./projectCard";
 import SectionHeading from "./sectionHeading";
 
 export default function Projects() {
-    return <div className="w-full flex justify-center flex-col items-center gap-4">
-        <SectionHeading>Projects</SectionHeading>
-        <div>
-            {projects.map((project:ProjectType, index:number) => <ProjectCard project={project} key={index}/>)}
+    return (
+        <div className="w-full flex flex-col items-center gap-6 ">
+            <SectionHeading>Projects</SectionHeading>
+            <div className="flex flex-wrap justify-center gap-8 w-full">
+                {projects.map((project: ProjectType, index: number) => (
+                    <ProjectCard project={project} key={index} />
+                ))}
+            </div>
         </div>
-    </div>
+    );
 }

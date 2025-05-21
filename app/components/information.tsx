@@ -3,7 +3,7 @@ import Skills from "./skills";
 
 export default function Information() {
     return (
-        <div className="flex flex-col items-center w-full pt-32 font-sans blurbg">
+        <div className="flex flex-col items-center w-full h-full my-32 font-sans blurbg">
             <Skills />
             <Projects />
             <style jsx>{`
