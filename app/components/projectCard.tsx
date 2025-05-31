@@ -2,7 +2,6 @@ import { ProjectType } from "../types";
 import { skills } from "../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Button } from "@/components/ui/button";
 import { openInNewTab } from "../utils";
 
 export default function ProjectCard({project}:{project:ProjectType}) {
