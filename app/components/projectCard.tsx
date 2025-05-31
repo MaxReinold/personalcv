@@ -1,4 +1,4 @@
-import { ProjectType, SkillType } from "../types";
+import { ProjectType } from "../types";
 import { skills } from "../data";
 
 export default function ProjectCard({project}:{project:ProjectType}) {
