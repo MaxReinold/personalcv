@@ -5,13 +5,9 @@ import { FileText, CircleUser } from 'lucide-react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, } from "@fortawesome/free-brands-svg-icons"
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons/faLinkedinIn"
+import { openInNewTab } from "../utils"
 
-export default function Main() {
-    const openInNewTab = (url: string) => {
-        window.open(url, '_blank', 'noopener,noreferrer');
-    };
-    
-    return (
+export default function Main() {return (
         <div className="flex flex-col gap-2">
             <CircleUser size={128}/>
             <div className="text-3xl name">Maxwell Reinold</div>

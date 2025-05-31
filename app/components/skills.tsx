@@ -12,7 +12,7 @@ export default function Skills() {
     const skillsArray = Object.keys(skills).map(key => skills[key]);
 
     return (
-        <div className={cn("flex flex-col gap-4 w-full items-center relative transition-all pb-8")}>
+        <div className={cn("flex flex-col gap-4 w-full items-center relative transition-all pb-8 max-w-4xl")}>
         <SectionHeading>Skills</SectionHeading>
             <div className="flex flex-row gap-10">
                 {categories.map((key, index) => {
